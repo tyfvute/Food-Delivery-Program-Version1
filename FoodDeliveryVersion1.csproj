@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFD2FD3D-85CC-4BDF-9469-04EB5570CB89}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FoodDeliveryVersion1</RootNamespace>
+    <AssemblyName>FoodDeliveryVersion1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClients.Designer.cs">
+      <DependentUpon>AddClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCompositionOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCompositionOrder.Designer.cs">
+      <DependentUpon>AddCompositionOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDeliverers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDeliverers.Designer.cs">
+      <DependentUpon>AddDeliverers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMenu.Designer.cs">
+      <DependentUpon>AddMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrders.Designer.cs">
+      <DependentUpon>AddOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRestaurants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRestaurants.Designer.cs">
+      <DependentUpon>AddRestaurants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientsForm.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ClientsForm.Designer.cs">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DeliverersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliverersForm.Designer.cs">
+      <DependentUpon>DeliverersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCompositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderCompositionForm.Designer.cs">
+      <DependentUpon>OrderCompositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestaurantsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestaurantsForm.Designer.cs">
+      <DependentUpon>RestaurantsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchClients.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="SearchClients.Designer.cs">
+      <DependentUpon>SearchClients.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="SearchCompositionOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchCompositionOrder.Designer.cs">
+      <DependentUpon>SearchCompositionOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchDeliverers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDeliverers.Designer.cs">
+      <DependentUpon>SearchDeliverers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchMenu.Designer.cs">
+      <DependentUpon>SearchMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchOrders.Designer.cs">
+      <DependentUpon>SearchOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchRestaurants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchRestaurants.Designer.cs">
+      <DependentUpon>SearchRestaurants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="База_данных_доставки_еды_1_версияDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>База_данных_доставки_еды_1_версияDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <EmbeddedResource Include="AddClients.resx">
+      <DependentUpon>AddClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCompositionOrder.resx">
+      <DependentUpon>AddCompositionOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDeliverers.resx">
+      <DependentUpon>AddDeliverers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMenu.resx">
+      <DependentUpon>AddMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrders.resx">
+      <DependentUpon>AddOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRestaurants.resx">
+      <DependentUpon>AddRestaurants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientsForm.resx">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliverersForm.resx">
+      <DependentUpon>DeliverersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderCompositionForm.resx">
+      <DependentUpon>OrderCompositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RestaurantsForm.resx">
+      <DependentUpon>RestaurantsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchClients.resx">
+      <DependentUpon>SearchClients.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchCompositionOrder.resx">
+      <DependentUpon>SearchCompositionOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchDeliverers.resx">
+      <DependentUpon>SearchDeliverers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchMenu.resx">
+      <DependentUpon>SearchMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchOrders.resx">
+      <DependentUpon>SearchOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchRestaurants.resx">
+      <DependentUpon>SearchRestaurants.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="База_данных_доставки_еды_1_версияDataSet.xsc">
+      <DependentUpon>База_данных_доставки_еды_1_версияDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="База_данных_доставки_еды_1_версияDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>База_данных_доставки_еды_1_версияDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="База_данных_доставки_еды_1_версияDataSet.xss">
+      <DependentUpon>База_данных_доставки_еды_1_версияDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="База данных доставки еды 1 версия.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
